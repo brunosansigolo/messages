@@ -1,0 +1,20 @@
+<% include ./partials/header %>
+
+<div class="ui main text container center aligned segment">
+    <div class="ui info message huge">
+        <div class="header">
+            Message Found!
+        </div>
+    </div>
+    <div class="ui blue message left aligned">
+        <ul class="list">
+            <li>
+            <p>ID: <%= foundMessage._id %></p>
+            <p>Message: <%= foundMessage.message %></p>
+            </li>
+        </ul>
+    </div>
+    <a class="ui primary button" href="/">Back</a>
+</div>
+
+<% include ./partials/footer %>

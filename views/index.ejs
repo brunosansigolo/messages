@@ -1,0 +1,30 @@
+<% include ./partials/header %>
+
+<div class="ui message">
+  <div class="header">
+    How to use:
+  </div>
+  <p>Root ("/messages") - Access all messages</p>
+  <p>/messages/"message" - Create a new message</p>
+  <p>/messages/search/"id" - Search by ID</p>
+</div>
+
+<div class="ui main text container center aligned segment">
+    <div class="ui info message huge">
+        <div class="header">
+            Messages
+        </div>
+    </div>
+    <% messages.forEach(function(message){ %>
+    <div class="ui blue message left aligned">
+        <ul class="list">
+            <li>
+            <p>ID: <%= message._id %></p>
+            <p>Message: <%= message.message %></p>
+            </li>
+        </ul>
+    </div>
+    <% }) %>
+</div>
+
+<% include ./partials/footer %>
