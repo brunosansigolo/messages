@@ -1,5 +1,4 @@
-var bodyParser =    require("body-parser"),
-    mongoose =      require("mongoose"),
+var mongoose =      require("mongoose"),
     express =       require("express"),
     app     =       express();
 
@@ -7,7 +6,6 @@ var bodyParser =    require("body-parser"),
 mongoose.connect("mongodb://localhost/messages_app");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
-app.use(bodyParser.urlencoded({extended: true}));
 
 // MONGOOSE/MODEL CONFIG
 // SCHEMA
